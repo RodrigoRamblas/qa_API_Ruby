@@ -6,17 +6,21 @@ Feature: As a user I want to validate whether a ZIP code is valid or invalid
     @validZipCode
     Scenario Outline: Make an HTTP request to verify that it is a valid zip code
         Given that I have a valid zip code
-        When I make a request <validZipCode>
-        Then I must know if this zip code is valid <code>
-        
+        When I make a request <ZipCode>
+        Then I must know if this zip code is valid 
+
+        Examples:
+        |ZipCode     |
+        |'11672120'  |
+        |'79621428'  |
 
     @invalidZipCode
     Scenario Outline: Make an HTTP request to verify that it is a invalid zip code
         Given that I have a invalid zip code
-        When I make a request <invalidZipCode>
-        Then I must know if this zip code is invalid <code>
+        When I make a request <ZipCode>
+        Then I must know if this zip code is invalid
 
         Examples:
-        |validZipCode|invalidZipCode| code|
-        |'11672120'  |'01001111'    |'200'|
-        |'79621428'  |'01221111'    |'200'|
+        |ZipCode       |
+        |'01001111'    |
+        |'01221111'    |
