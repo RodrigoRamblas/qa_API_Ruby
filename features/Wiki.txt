@@ -5,3 +5,11 @@
     [specifications] - In this folder, the .features files will be saved.
     [spep_definitions] - In this folder we will save the definitions of the steps.
     [support] - In this folder we will keep the Ruby support files.
+
+                             [install the gem]
+    gem install bundler -v 1.11.2
+    gem install cucumber -v 2.4.0
+    gem install httparty -v 0.13.7
+
+                             [Ruby version]
+    Ruby 3.0.0
