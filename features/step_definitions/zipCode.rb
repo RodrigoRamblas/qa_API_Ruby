@@ -4,10 +4,11 @@ end
 When('I make a request {string}') do |zipCode|                                  
     response = HTTParty.get("https://viacep.com.br/ws/#{zipCode}/json/")
     $body = response.body
+    print $body
 end                                                                          
 
 Then('I must know if this zip code is valid') do 
-    validate = $body['erro']
+    validate = $body["erro"]
     print validate
   end                                                                          
                                                                                
