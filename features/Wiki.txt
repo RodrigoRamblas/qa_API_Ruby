@@ -10,6 +10,7 @@
     gem install bundler -v 1.11.2
     gem install cucumber -v 2.4.0
     gem install httparty -v 0.13.7
+    gem 'rspec', '~> 3.10'
 
                              [Ruby version]
     Ruby 3.0.0
